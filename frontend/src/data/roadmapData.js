@@ -1,110 +1,208 @@
-export const careerLevels = [
-  { level: "Beginner", description: "Basic frontend", outcome: "Internship" },
-  { level: "Intermediate", description: "Frontend + backend", outcome: "Junior Developer" },
-  { level: "Advanced", description: "System design + deployment", outcome: "SDE-1 / Product company" },
-  { level: "Expert", description: "Scaling + architecture", outcome: "Senior Developer" },
-];
-
-export const salaryExpectations = [
-  { role: "Frontend Only", intern: "₹10k–25k", fresher: "₹3–6 LPA", sde1: null },
-  { role: "Full Stack", intern: null, fresher: "₹4–10 LPA", sde1: null },
-  { role: "Full Stack + Strong DSA", intern: null, fresher: null, sde1: "₹8–20 LPA" },
-];
-
-export const roadmapStages = [
-  {
-    id: 1,
-    title: "HTML + CSS + JavaScript",
-    icon: "Layout",
-    color: "from-orange-500 to-yellow-500",
-    shadowColor: "shadow-orange-500/20",
-    details: {
-      "HTML Depth": "Semantic tags, forms, tables, accessibility, SEO. (Goal: build landing page, portfolio, responsive form).",
-      "CSS Depth": "Flexbox, grid, positioning, animations, media queries. (Goal: convert Figma to webpage, mobile responsive).",
-      "JavaScript Depth": "Variables, functions, arrays, objects, loops, DOM, events, async/await, promises, fetch API, closures, hoisting, ES6."
+export const roadmapData = {
+  name: "Full Stack Roadmap",
+  children: [
+    {
+      name: "LEARNING STRATEGY",
+      children: [
+        { name: "Beginners", details: "Focus on 'what technology to learn'." },
+        { name: "Industry", details: "Cares about 'how deeply you know them'. Depth determines roles: internship, freelance, startup, product company, high salary." }
+      ]
     },
-    jobChances: [
-      { role: "Frontend Intern", min: 50, max: 70 },
-      { role: "Web Dev Intern", min: 55, max: 75 },
-      { role: "Freelance", min: 40, max: 60 },
-    ]
-  },
-  {
-    id: 2,
-    title: "React",
-    icon: "Atom",
-    color: "from-cyan-400 to-blue-500",
-    shadowColor: "shadow-cyan-500/20",
-    details: {
-      "Must Know": "Components, props, state, hooks, useEffect, routing, API handling, forms, context API, reusable components.",
-      "Intermediate Depth": "Custom hooks, performance optimization, lazy loading, protected routes.",
-      "Goal": "Build auth app, dashboard, CRUD app, API projects without tutorials."
+    {
+      name: "CAREER LEVELS",
+      children: [
+        { name: "Beginner", details: "Basic frontend -> Internship." },
+        { name: "Intermediate", details: "Frontend + backend -> Junior Developer." },
+        { name: "Advanced", details: "System design + deployment -> SDE-1 / Product company." },
+        { name: "Expert", details: "Scaling + architecture -> Senior Developer." }
+      ]
     },
-    jobChances: [
-      { role: "Frontend Intern", min: 70, max: 85 },
-      { role: "Junior React Dev", min: 45, max: 60 },
-      { role: "Startup Frontend Dev", min: 40, max: 55 },
-    ]
-  },
-  {
-    id: 3,
-    title: "Java + Spring Boot (Backend)",
-    icon: "Coffee",
-    color: "from-red-500 to-orange-600",
-    shadowColor: "shadow-red-500/20",
-    details: {
-      "Core Java Depth": "OOP, inheritance, polymorphism, abstraction, encapsulation, collections, exception handling, multithreading, streams, lambdas.",
-      "DSA Depth": "Arrays, strings, hashmap, recursion, stack, queue, linked list, trees, sorting, binary search.",
-      "Spring Boot Depth": "REST APIs, CRUD, controllers, services, repositories, JPA/Hibernate, auth, JWT, validation.",
-      "Goal": "Build auth backend, blog backend, e-commerce backend."
+    {
+      name: "THE 6-STAGE ROADMAP",
+      children: [
+        {
+          name: "STAGE 1: HTML + CSS + JavaScript",
+          children: [
+            {
+              name: "Depth Required",
+              children: [
+                { name: "HTML", details: "Semantic tags, forms, tables, accessibility, SEO." },
+                { name: "CSS", details: "Flexbox, grid, positioning, animations, media queries." },
+                { name: "JavaScript", details: "(Very Important) Variables, functions, arrays, objects, loops, DOM, events, async/await, promises, fetch API, closures, hoisting, ES6." }
+              ]
+            },
+            {
+              name: "Enough Depth? (Goals)",
+              children: [
+                { name: "HTML", details: "Build landing page, portfolio, responsive form." },
+                { name: "CSS", details: "Convert Figma to webpage, mobile responsive." },
+                { name: "JS", details: "Interactive pages, call APIs, small projects." }
+              ]
+            },
+            {
+              name: "Jobs After Stage 1",
+              children: [
+                { name: "Frontend Intern", details: "50–70%" },
+                { name: "Web Development Intern", details: "55–75%" },
+                { name: "Freelancing Small Work", details: "40–60%" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "STAGE 2: REACT",
+          children: [
+            {
+              name: "What Depth Needed?",
+              children: [
+                { name: "Core", details: "Components, props, state, hooks, useEffect, routing, API handling, forms, context API, reusable components." },
+                { name: "Intermediate Depth", details: "Custom hooks, performance optimization, lazy loading, protected routes." }
+              ]
+            },
+            {
+              name: "Enough Depth For Job?",
+              children: [
+                { name: "Goals", details: "Build auth app, dashboard, CRUD app, API projects WITHOUT tutorials." }
+              ]
+            },
+            {
+              name: "Jobs After React",
+              children: [
+                { name: "Frontend Developer Intern", details: "70–85%" },
+                { name: "Junior React Developer", details: "45–60%" },
+                { name: "Startup Frontend Developer", details: "40–55%" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "STAGE 3: JAVA + SPRING BOOT",
+          children: [
+            {
+              name: "Depth Needed",
+              children: [
+                { name: "Core Java", details: "OOP, inheritance, polymorphism, collections, exception handling, multithreading, streams, lambda expressions." },
+                { name: "DSA", details: "Arrays, strings, hashmap, recursion, stack, queue, linked list, trees, sorting, binary search." },
+                { name: "Spring Boot", details: "REST APIs, CRUD, controllers, services, repositories, JPA/Hibernate, auth, JWT, exception handling, validation." }
+              ]
+            },
+            {
+              name: "Enough Depth For Job?",
+              children: [
+                { name: "Goals", details: "Build auth backend, blog backend, e-commerce backend, role-based login system." }
+              ]
+            },
+            {
+              name: "Jobs After Backend",
+              children: [
+                { name: "Java Backend Intern", details: "65–80%" },
+                { name: "Java Full Stack Intern", details: "70–85%" },
+                { name: "Junior Java Developer", details: "50–65%" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "STAGE 4: DATABASES",
+          children: [
+            {
+              name: "Must Know",
+              details: "SQL queries, joins, normalization, indexing, relationships, transactions."
+            },
+            {
+              name: "Depth Needed",
+              details: "Design DB for projects, optimize simple queries, connect backend."
+            },
+            {
+              name: "Jobs After Database + Backend",
+              children: [
+                { name: "Full Stack Intern", details: "75–90%" },
+                { name: "Startup Developer", details: "65–80%" },
+                { name: "Service Company Fresher", details: "80–90%" }
+              ]
+            }
+          ]
+        },
+        {
+          name: "STAGE 5: GITHUB + DEPLOYMENT",
+          children: [
+            {
+              name: "GitHub",
+              details: "git add, commit, push, branches, pull requests."
+            },
+            {
+              name: "Deployment",
+              details: "Vercel, Netlify, Render, Railway."
+            },
+            {
+              name: "Why Important?",
+              details: "Beginners skip this, companies reject for no live projects or copied work."
+            }
+          ]
+        },
+        {
+          name: "STAGE 6: ADVANCED SKILLS",
+          children: [
+            {
+              name: "Learn",
+              details: "Docker, AWS basics, Redis, WebSockets, CI/CD, System Design basics."
+            },
+            {
+              name: "Jobs After Advanced Skills",
+              children: [
+                { name: "Product Company SDE-1", details: "35–55%" },
+                { name: "Good Startup Developer", details: "70–85%" },
+                { name: "Remote Developer", details: "40–60%" }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    jobChances: [
-      { role: "Java Backend Intern", min: 65, max: 80 },
-      { role: "Java Full Stack Intern", min: 70, max: 85 },
-      { role: "Junior Java Dev", min: 50, max: 65 },
-    ]
-  },
-  {
-    id: 4,
-    title: "Databases",
-    icon: "Database",
-    color: "from-emerald-400 to-teal-600",
-    shadowColor: "shadow-emerald-500/20",
-    details: {
-      "Must Know": "SQL queries, joins, normalization, indexing, relationships, transactions.",
-      "Goal": "Design database for projects, optimize queries, connect backend."
+    {
+      name: "REALISTIC EXPECTATIONS",
+      children: [
+        {
+          name: "If You Learn Only Frontend",
+          children: [
+            { name: "Jobs", details: "Frontend intern, UI developer, web intern." },
+            { name: "Salary (India)", details: "₹10k–25k (internship), ₹3–6 LPA (fresher)." }
+          ]
+        },
+        {
+          name: "If You Learn Full Stack Properly",
+          children: [
+            { name: "Jobs", details: "Full stack developer, Java developer, backend developer, React developer." },
+            { name: "Salary (India)", details: "₹4–10 LPA (fresher). Startups may give higher." }
+          ]
+        },
+        {
+          name: "If You Also Become Strong In DSA",
+          children: [
+            { name: "Jobs", details: "SDE-1, product companies, better startups." },
+            { name: "Salary (India)", details: "₹8–20 LPA possible." }
+          ]
+        }
+      ]
     },
-    jobChances: [
-      { role: "Full Stack Intern", min: 75, max: 90 },
-      { role: "Startup Developer", min: 65, max: 80 },
-      { role: "Service Company Fresher", min: 80, max: 90 },
-    ]
-  },
-  {
-    id: 5,
-    title: "Version Control & Deployment",
-    icon: "GitBranch",
-    color: "from-gray-400 to-gray-600",
-    shadowColor: "shadow-gray-500/20",
-    details: {
-      "GitHub": "git add, commit, push, branches, pull requests.",
-      "Deployment": "Vercel, Netlify, Render, Railway."
+    {
+      name: "EXACT DEPTH CHECK",
+      children: [
+        { name: "Build responsive UI", details: "Frontend ready" },
+        { name: "Build API", details: "Backend ready" },
+        { name: "Authentication system", details: "Intermediate" },
+        { name: "Deploy full stack app", details: "Job ready" },
+        { name: "Solve medium LeetCode", details: "Interview ready" },
+        { name: "Explain projects confidently", details: "Industry ready" }
+      ]
     },
-    jobChances: []
-  },
-  {
-    id: 6,
-    title: "Advanced Skills",
-    icon: "Cpu",
-    color: "from-purple-500 to-indigo-600",
-    shadowColor: "shadow-purple-500/20",
-    details: {
-      "Skills": "Docker, AWS basics, Redis, WebSockets, CI/CD, System Design."
-    },
-    jobChances: [
-      { role: "Product Company SDE-1", min: 35, max: 55 },
-      { role: "Good Startup Developer", min: 70, max: 85 },
-      { role: "Remote Developer", min: 40, max: 60 },
-    ]
-  }
-];
+    {
+      name: "BEST PROJECTS FOR RESUME",
+      children: [
+        { name: "Beginner", details: "Weather app, Todo app, Calculator, Portfolio." },
+        { name: "Intermediate", details: "Blog website, Authentication app, Notes app, Movie app." },
+        { name: "Advanced", details: "E-commerce, Chat app, LinkedIn clone, Learning platform, Realtime collaboration app." }
+      ]
+    }
+  ]
+};
